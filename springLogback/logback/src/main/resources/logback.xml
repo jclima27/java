@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+<!-- 
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>
+				%d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%thread]) %highlight(%-5level) %logger{36}.%M - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	
+	<root level="info">
+		<appender-ref ref="STDOUT"/>
+	</root>
+-->
+<!--
+ <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+ 	<file>logs/spring-boot-logging.log</file>
+ 	<append>true</append>
+ 	<encoder>
+ 		<pattern>
+ 			%d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%thread]) %highlight(%-5level) %logger{36}.%M - %msg%n
+ 		</pattern>
+ 	</encoder>
+ </appender>
+ <root level="info">
+	<appender-ref ref="FILE"/>
+ </root>
+ -->
+ 
+ <!-- o Logger por padrao herda do <root> para tirar a herenca so usar additivity=false -->
+ <!-- o logger eu posso adicionar log somente no pacote colocando name=com.example.demo -->
+ <!-- 
+ <logger name="com.example.demo.LogbackApplication" level="info" additivity="false">
+ 	<appender-ref ref="FILE" />
+ </logger>
+  -->
+  <property name="LOG_PATH" value="logs2"/>
+  <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+  	<file>${LOG_PATH}/spring-boot-logging.log</file>
+  	<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+    	<Pattern>
+           %d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n
+        </Pattern>
+    </encoder>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+    	<fileNamePattern>
+    		${LOG_PATH}/spring-boot-logging.%d{yyyy-MM-dd}.log
+    	</fileNamePattern>
+    	<!-- Qtde de tempo que o arquivo vai ficar disponivel antes de ser excluido automaticamente 
+    		este tempo depende do fileNamePattern se for diario no caso abaixo ficara 10 dias
+    	<maxHistory>10</maxHistory>
+    	 Qtde maxima do tamanho do arquivo 
+    	<totalSizeCap>100MB</totalSizeCap>
+    	-->
+    </rollingPolicy>
+  </appender>
+  <root level="info">
+	<appender-ref ref="FILE"/>
+ </root>
+</configuration>
+ 
+ 

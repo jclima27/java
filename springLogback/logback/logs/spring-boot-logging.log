@@ -1,0 +1,49 @@
+24-11-2020 19:01:17.217 [35m[main][0;39m [34mINFO [0;39m com.example.demo.LogbackApplication.main - doStuff took input - {}
+24-11-2020 19:01:17.231 [35m[main][0;39m [31mWARN [0;39m com.example.demo.LogbackApplication.main - doStuff needed to warn - {}
+24-11-2020 19:01:17.232 [35m[main][0;39m [1;31mERROR[0;39m com.example.demo.LogbackApplication.main - doStuff encountered an error with value - {}
+24-11-2020 19:01:18.413 [35m[main][0;39m [1;31mERROR[0;39m o.s.boot.SpringApplication.reportFailure - Application run failed
+java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@19:13 - no applicable action for [appender], current ElementPath  is [[configuration][appender][appender]]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:327)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:281)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:239)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:203)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:196)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:170)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:148)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:82)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:63)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:117)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:111)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:62)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:320)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
+	at com.example.demo.LogbackApplication.main(LogbackApplication.java:19)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@19:13 - no applicable action for [appender], current ElementPath  is [[configuration][appender][appender]]
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:175)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reinitialize(LogbackLoggingSystem.java:228)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:73)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:131)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:312)
+	... 18 common frames omitted
+24-11-2020 19:02:50.192 [35m[main][0;39m [34mINFO [0;39m com.example.demo.LogbackApplication.main - doStuff took input - {}
+24-11-2020 19:02:50.205 [35m[main][0;39m [31mWARN [0;39m com.example.demo.LogbackApplication.main - doStuff needed to warn - {}
+24-11-2020 19:02:50.206 [35m[main][0;39m [1;31mERROR[0;39m com.example.demo.LogbackApplication.main - doStuff encountered an error with value - {}
+24-11-2020 19:02:51.539 [35m[main][0;39m [34mINFO [0;39m com.example.demo.LogbackApplication.logStarting - Starting LogbackApplication using Java 11.0.8 on CEJULIM with PID 15320 (C:\Users\Julio Cezar\Desktop\Java\java\springLogback\logback\target\classes started by JulioCezar in C:\Users\Julio Cezar\Desktop\Java\java\springLogback\logback)
+24-11-2020 19:02:51.547 [35m[main][0;39m [34mINFO [0;39m com.example.demo.LogbackApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+24-11-2020 19:02:53.977 [35m[main][0;39m [34mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+24-11-2020 19:02:54.011 [35m[main][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+24-11-2020 19:02:54.012 [35m[main][0;39m [34mINFO [0;39m o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+24-11-2020 19:02:54.013 [35m[main][0;39m [34mINFO [0;39m o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.39]
+24-11-2020 19:02:54.314 [35m[main][0;39m [34mINFO [0;39m o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+24-11-2020 19:02:54.315 [35m[main][0;39m [34mINFO [0;39m o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2601 ms
+24-11-2020 19:02:54.893 [35m[main][0;39m [34mINFO [0;39m o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+24-11-2020 19:02:55.443 [35m[main][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+24-11-2020 19:02:55.539 [35m[main][0;39m [34mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+24-11-2020 19:02:55.577 [35m[main][0;39m [34mINFO [0;39m com.example.demo.LogbackApplication.logStarted - Started LogbackApplication in 5.035 seconds (JVM running for 8.369)
