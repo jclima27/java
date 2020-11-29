@@ -1,4 +1,4 @@
-CREATE TABLE `mydatabase`.`Cliente` (
+CREATE TABLE `mydatabase`.`cliente` (
  `id` INT NOT NULL,
  `nome` VARCHAR(255) NULL,
  `email` VARCHAR(255) NULL,
@@ -6,6 +6,6 @@ CREATE TABLE `mydatabase`.`Cliente` (
  `cpf` VARCHAR(45) NULL,
  PRIMARY KEY (`id`));
 
-ALTER TABLE `mydatabase`.`Cliente`
+ALTER TABLE `mydatabase`.`cliente`
  CHANGE COLUMN `id` `id` INT(11) NOT NULL AUTO_INCREMENT ,
  ADD UNIQUE INDEX `id_UNIQUE` (`id` ASC);
