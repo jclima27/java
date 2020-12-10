@@ -1,0 +1,44 @@
+{
+	"id": "b3822df3-d117-eeec-0044-3893ec5024f6",
+	"name": "Kafka",
+	"description": "",
+	"order": [
+		"ae5ef5a2-3d64-b999-77a7-e24530470cf5"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1607556320012,
+	"owner": "1291423",
+	"public": false,
+	"requests": [
+		{
+			"id": "ae5ef5a2-3d64-b999-77a7-e24530470cf5",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/orders",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1607562080180,
+			"name": "Produzir String para a fila",
+			"description": "",
+			"collectionId": "b3822df3-d117-eeec-0044-3893ec5024f6",
+			"responses": [],
+			"rawModeData": "\"Testando\""
+		}
+	]
+}
